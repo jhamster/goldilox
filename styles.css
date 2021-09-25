@@ -37,12 +37,17 @@ body {
 .vertical-flex {
   background-color: var(--mid-light);
   width: 100%;
-  /*height: 100vh;*/
+  height: auto;
+  min-height: 100vh;
   margin: auto;
   border-style: solid;
   border-color: var(--accent2);
   border-top: 1px;
   border-bottom: 1px;
+}
+
+.about {
+  min-height: 10vh;
 }
 
 hr {
@@ -56,50 +61,31 @@ hr {
   margin-left: 20px;
 }
 
-.menu-container {
-  display: flex;
-  background-color: var(--primary);
-  padding: 0;
-  justify-content: center;
+.navbar-light {
+  background-color: var(--primary) !important;
+  margin-bottom: 0 !important;
 }
 
-.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.nav-link {
+  color: #145DA0 !important;
+  font-size: 24px;
+  margin-bottom: 0;
 }
 
-.menu-item, .menu-item-first {
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-  float: left;
+.navbar-light .navbar-nav .active>.nav-link {
+  color: #0C2D48 !important;
 }
 
-.menu-item-first {
-  margin-left: 20px;
-}
-
-.menu li a {
-  display: block;
-  padding: 20px 20px;
-  text-decoration: none;
-  color: #000000;
-}
-
-.menu li a:hover {
-  background-color: var(--hover);
-}
-
-.active {
-  background-color: var(--darker0);
+.nav-link:hover {
+  color: #0C3D48 !important;
 }
 
 .current-offer {
+  display: inline;
   font-style: italic;
-  font-size: 1.4em;
-  padding: 17px 0;
-  margin-right: 20px;
+  font-size: 1.5em;
+  margin-right: 30px;
+  padding-top: 10px;
   float: right;
 }
 
@@ -110,36 +96,31 @@ hr {
 .text_container {
   position: absolute;
   left: 40px;
-  bottom: 130px;
+  bottom: 40px;
   width: 350px;
-  background-color: #B5AEDA44;
-}
-
-#home_cover_button {
-  position: absolute;
-  bottom: 50px;
-  left: 110px;
-  font-size: 1.5em;
-  padding: 15px;
 }
 
 .image_text {
-  margin: 0;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: var(--lightest0);
   font-style: italic;
 }
 
 .cover {
-  width: 980px;
+  width: 970px;
   margin: 10px;
+}
+
+.about_img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
 }
 
 .one-col {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 }
 
 .one-col img {
@@ -151,6 +132,31 @@ hr {
   font-size: 1.8em;
   font-weight: bold;
   margin:auto;
+}
+
+.social-link {
+  margin: 0 20px;
+}
+
+.footer-side {
+  background-color: var(--lighter0);
+}
+
+.bg-light {
+  background-color: var(--lighter0) !important;
+}
+
+.medium-whitespace {
+  margin: 20px;
+}
+
+.shop-item {
+  font-size: 1.4em;
+  margin-left: 10px;
+}
+
+.link {
+  font-size: 1.2em;
 }
 
 /* Mobile Styles */
