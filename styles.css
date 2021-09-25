@@ -243,11 +243,11 @@ label {
   }
   .about-txt {
     left: 2%;
-    bottom: 15%;
+    bottom: 10%;
     width: 45vw;
   }
   .about-image_text {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   #contact-title {
     font-size: 1.5em;
