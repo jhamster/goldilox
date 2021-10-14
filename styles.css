@@ -193,6 +193,23 @@ label {
   font-size: 1.2em;
 }
 
+#schedule-lists {
+  margin-left: 20px;
+}
+
+#Schedule-Header {
+  margin-bottom: 30px;
+}
+
+#schedule-selector-description {
+  display: inline;
+}
+
+#type-selector {
+  display: inline;
+  margin-left: 10px;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   .wrapper {

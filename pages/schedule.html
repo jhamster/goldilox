@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset='UTF-8'/>
-    <title>Goldilox Hair Salon | About</title>
+    <title>Goldilox Hair Salon | Schedule</title>
     <meta name='viewport'
         content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- Bootstrap CSS -->
@@ -15,7 +15,7 @@
   <body>
     <div class='wrapper'>
       <div class='filler-side'></div>
-      <div class='vertical-flex about'>
+      <div class='vertical-flex'>
         <hr>
         <img class='logo' src="/images/logo_small.jpg"/>
         <p class='current-offer'>Refer a friend and get $5 off your next visit!<p>
@@ -33,10 +33,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/pages/shop.html">Shop</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="/pages/about.html">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="/pages/schedule.html">Schedule</a>
                 </li>
                 <li class="nav-item">
@@ -49,20 +49,55 @@
             </div>
           </div>
         </nav>
+        <h5 id="Schedule-Header">Please look up the estimated time for the appointment you would like to schedule
+          in the list below</h5>
+        <div class='one-col' id="schedule-lists">
+          <div class="list-with-header">
+            <h4 class="list-title">10 Minutes</h4>
+            <ul>
+              <li>Eyebrow wax</li>
+              <li>Lip wax</li>
+            </ul>
+          </div>
+          <div class="list-with-header">
+            <h4 class="list-title">30 Minutes</h4>
+            <ul>
+              <li>Men's Cut</li>
+            </ul>
+          </div>
+          <div class="list-with-header">
+            <h4 class="list-title">1 Hour</h4>
+            <ul>
+              <li>Women's Cut (with styling)</li>
+              <li>Scalp Treatment</li>
+              <li>Deep Condition</li>
+            </ul>
+          </div>
+          <div class="list-with-header">
+            <h4 class="list-title">2 Hours or More</h4>
+            <ul>
+              <li>Highlights</li>
+              <li>Full Color</li>
+              <li>Balayage</li>
+            </ul>
+          </div>
+        </div>
+        <h6 id="schedule-selector-description">Select Time for your appointment:</h6>
+        <select id="type-selector" onchange="update_calendar()">
+          <option value="select">--select--</option>
+          <option value="10-min">10-min</option>
+          <option value="30-min">30-min</option>
+          <option value="1-hour">1-hour</option>
+          <option value="2-hour +">2-hour +</option>
+        </select>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" id="schedule-calendly" style="min-width:320px;height:900px;" data-auto-load="true">
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        </div>
+        <!-- Calendly inline widget end -->
       </div>
       <div class='filler-side'></div>
     </div>
-    <div class='overlay'>
-      <img class='about_img' src='\images\mary_cover.JPG'/>
-      <div class='about-txt'>
-        <p class='about-image_text'>Hi! I’m Mary! I’m a Wife, Momma and I love doing hair!
-          I offer Cuts, Color and Waxing services. Please visit my <a href="\pages\contact.html">calendar</a>
-          to schedule an appointment<br>
-          Feel free to take a look at some of the work I have done by visiting my
-          <a href="https://www.instagram.com/goldilox.hair.salon/">instagram account</a></p>
-      </div>
-    </div>
-
     <div class="wrapper">
       <div class="footer-side"></div>
       <!-- Footer -->
@@ -154,8 +189,10 @@
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
     <script text="type/javascript" src="/script.js"></script>
-
     <!-- Copyright -->
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
