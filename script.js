@@ -1,4 +1,23 @@
 
+let default_schedule_type = "10-min";
+
+function get_selected() {
+    debugger
+    selector = document.getElementById('type-selector');
+    try {
+        selector.value = schedule_type;
+    }
+    catch (error) {
+        selector.value = default_schedule_type;
+    }
+    update_calendar();
+}
+
+function set_schedule_type(new_type) {
+    debugger
+    schedule_type = new_type;
+}
+
 function remove_old_calendar() {
     div_element = document.getElementById('schedule-calendly');
     div_element.removeChild(div_element.children[2]);

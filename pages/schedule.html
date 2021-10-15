@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='/styles.css'/>
   </head>
-  <body>
+  <body onload="get_selected()">
     <div class='wrapper'>
       <div class='filler-side'></div>
       <div class='vertical-flex'>
@@ -49,8 +49,20 @@
             </div>
           </div>
         </nav>
-        <h5 id="Schedule-Header">Please look up the estimated time for the appointment you would like to schedule
-          in the list below</h5>
+        <h5 id="Schedule-Header">For an estimate of time: see the list below</h5>
+        <h6 id="schedule-selector-description">Select Duration of your appointment:</h6>
+        <select id="type-selector" onchange="update_calendar()">
+          <option value="select">--select--</option>
+          <option value="10-min">10-min</option>
+          <option value="30-min">30-min</option>
+          <option value="1-hour">1-hour</option>
+          <option value="2-hour +">2-hour +</option>
+        </select>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" id="schedule-calendly" style="min-width:320px;height:700px;" data-auto-load="true">
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        </div>
+        <!-- Calendly inline widget end -->
         <div class='one-col' id="schedule-lists">
           <div class="list-with-header">
             <h4 class="list-title">10 Minutes</h4>
@@ -82,19 +94,6 @@
             </ul>
           </div>
         </div>
-        <h6 id="schedule-selector-description">Select Time for your appointment:</h6>
-        <select id="type-selector" onchange="update_calendar()">
-          <option value="select">--select--</option>
-          <option value="10-min">10-min</option>
-          <option value="30-min">30-min</option>
-          <option value="1-hour">1-hour</option>
-          <option value="2-hour +">2-hour +</option>
-        </select>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" id="schedule-calendly" style="min-width:320px;height:900px;" data-auto-load="true">
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        </div>
-        <!-- Calendly inline widget end -->
       </div>
       <div class='filler-side'></div>
     </div>
